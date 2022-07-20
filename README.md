@@ -10,5 +10,5 @@ Blogアプリのレポジトリ：https://github.com/KotaY0203/ror_blog_app
 4. /blog/config/database.ymlを修正。
 5. DB作成（下記サンプルコマンド）。
 ~~~
-$ ocker-compose run web bundle exec rails db:create
+$ docker-compose run web bundle exec rails db:create
 ~~~

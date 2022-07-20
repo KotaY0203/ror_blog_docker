@@ -1,5 +1,4 @@
 version: '3'
-# docker-composeの書式のバージョンを指定します。(原則、最新を指定する)
 
 services:
   db:
@@ -16,7 +15,7 @@ services:
       context: ./
       dockerfile: ./ruby/Dockerfile
     working_dir: /blog
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - type: bind
         source: "./blog"
